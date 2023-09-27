@@ -1,0 +1,279 @@
+@import "./block/block";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@600&family=Fraunces:ital,wght@0,700;0,900;1,900&family=Fredoka:wght@400;700&family=Hind+Madurai:wght@400;700&family=IBM+Plex+Sans&family=IBM+Plex+Sans+Thai&family=Indie+Flower&family=Inter&family=Khula&family=Lato:wght@700&family=Montserrat:ital,wght@0,300;1,100&family=Mulish&family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@300;700&family=Oswald:wght@200&family=Outfit&family=Philosopher:wght@400;700&family=Poppins:wght@100;400&family=Raleway:wght@500&family=Roboto+Condensed&family=Roboto:wght@300;400&family=Tektur:wght@600&family=Tilt+Prism&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // overflow-x: hidden;
+};
+
+@mixin f-style($f-size, $color, $f-weight){
+    font-size: $f-size;
+    color: $color;
+    font-weight: $f-weight;
+}
+
+$Font-Poppins:  'Poppins', sans-serif;
+
+
+.dashboard-wrapper{
+    display: flex;
+    width: 1350px;
+    margin: auto;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    width: 355px;
+    background-color: rgba(77, 68, 181, 1);
+}
+.aside-menu-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+    li{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        @include f-style(18px, #c1bbeb, 500);
+        font-family: $Font-Poppins;
+        padding-right: 20px;
+        margin-left: 40px;
+        height: 64px;
+        border-top-left-radius: 40px;
+        border-bottom-left-radius: 40px;    
+        transition: 0.3s;
+        &:hover{   
+            background-color: rgba(216, 237, 247, 1);
+            color: #4d44b5;
+            border-top-left-radius: 40px;
+            border-bottom-left-radius: 40px;
+            cursor: pointer;
+        }
+        i{
+            font-size: 25px;
+            margin: 0 15px 0 70px;
+        
+        }
+    }
+    
+ }
+}
+
+
+.main-wrapper{
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(216, 237, 247, 1);
+    nav{
+        width: 1050px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        margin-top: 50px;
+        justify-content: space-between;
+    }
+    form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 350px;
+        height: 60px;
+        border-radius: 40px;
+        background-color: #fff;
+        i{
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 10px 0 15px;
+            color: rgba(77, 68, 181, 1);
+        }
+        input{
+            width: 100%;
+            border: none;
+            outline: none;
+            @include f-style(20px, #000, 400);
+            font-family: $Font-Poppins;
+            height: 100%;
+        }
+    }
+    .resource-container{
+        display: flex;
+        justify-content: space-evenly;
+        width: 1020px;
+        margin: 40px auto 0;
+        border-radius: 20px;
+        height: 172px;
+        background-color: white;
+        .cards{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            width: 210px;
+            .card-info{
+                width: auto;
+                height: auto;
+                p{
+                    @include f-style(18px, #c1bbeb, 400);
+                    font-family: $Font-Poppins;
+                }
+                strong{
+                    @include f-style(36px, rgba(48, 57, 114, 1), 700);
+                    font-family: $Font-Poppins;
+                }
+            }
+            img:first-child{
+                width: 77px;
+                height: 83px;
+            }
+            img:nth-child(2){
+                width: 100px;
+                height: 90px;
+            }
+            img:nth-child(3){
+                width: 88px;
+                height: 97px;
+            }
+            img:last-child{
+                width: 107px;
+                height: 103px;
+            }
+        }
+    }
+   
+}
+
+
+.info__teacher-wrapper{
+    width: 1020px;
+    height: 725px;
+    margin: 36px auto 0;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.ustozlar-text{
+    @include f-style(24px, rgba(48, 57, 114, 1), 800);
+    font-family: $Font-Poppins;
+    margin: 32px 0 0 32px;
+}
+.info-about-teacher{
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    margin-top: 56px;
+    justify-content: space-between;
+    i{
+        font-size: 24px;
+    }
+}
+.teacher{
+    width: 470px;
+    display: flex;
+    align-items: center;
+    h3{
+        @include f-style(18px, rgba(48, 57, 114, 1), 600);
+        font-family: $Font-Poppins;
+        margin-left: 24px;
+        flex: 1;
+    }
+    strong{
+        @include f-style(18px, #4d44b5, 600);
+        font-family: $Font-Poppins;
+    }
+}
+.toifa{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    p{
+        @include f-style(14px, #a098ae, 400);
+        font-family: $Font-Poppins;
+    }
+    b{
+        @include f-style(18px, #4d44b5, 600);
+        font-family: $Font-Poppins;
+    }
+}
+.teacher-btn{
+    @include f-style(18px, #fcc43e, 600);
+    font-family: $Font-Poppins;
+    padding: 7px 50px;
+    border: none;
+    border-radius: 40px;
+    background-color: #5d5fef;
+}
+
+.info__customer-wrapper{
+    width: 1020px;
+    height: auto;
+    margin: 36px auto 0;
+    border-radius: 20px;
+    // padding: 0 3px;
+    background-color: rgb(255, 255, 255);
+}
+.mijoz-text{
+    @include f-style(24px, #303972, 700);
+    font-family: $Font-Poppins;
+    margin: 40px 0 0 47px;
+}
+.customer-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 0 135px;
+    width: 650px;
+    height: 35px;
+    list-style-type: none;
+    @include f-style(21px, rgba(160, 152, 174, 1), 400);
+    font-family: $Font-Poppins;
+}
+
+.mijoz-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 780px;
+    height: 70px;
+    margin-top: 55px;
+    h4{
+        @include f-style(16px, #a098ae, 400);
+        font-family: $Font-Poppins;
+        margin: 0 20px;
+    }
+    strong{
+        @include f-style(23px, rgba(48, 57, 114, 1), 600);
+        font-family: $Font-Poppins;
+        padding-right: 60px;
+        margin-left: 25px;
+    }
+    p{
+        @include f-style(18px, #4d44b5, 700);
+        font-family: $Font-Poppins;
+        text-shadow: 0px 2px  3px #8b8b93;
+    }
+}
+.mijoz{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    h3{
+        @include f-style(16px, #4d44b5, 600);
+        font-family: $Font-Poppins;
+        text-align: left;
+        margin-left: 20px;
+    }
+};
+
+.teacher-nav{
+    width: 100%;
+    height: auto;
+    background-color: gold;
+}

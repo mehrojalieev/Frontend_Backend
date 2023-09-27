@@ -1,0 +1,133 @@
+
+@mixin f-style($f-size, $color, $f-weight){
+    font-size: $f-size;
+    color: $color;
+    font-weight: $f-weight;
+}
+
+$Font-Poppins:  'Poppins', sans-serif;
+
+
+.admin-panel-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1260px;
+    height: 660px;
+    margin: auto;
+    overflow-y: hidden;
+
+}
+.admin-panel-logo{
+    display: grid;
+    place-items: center;
+    width: 570px;
+    height: 100%;
+    background-color: #E2F0FF;
+    .panel__logo-image{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+        width: 570px;
+        height: 100%;
+        img{
+            width: 500px;
+            aspect-ratio: 1/1;
+        }
+        h3{
+            @include f-style(26px, #24466d, 600);
+            font-family: $Font-Poppins;
+            a{
+                text-decoration: none;
+                color: #24466d
+            }
+        }   
+        p{
+            @include f-style(16px, #24466d, 400);
+            font-family: $Font-Poppins;
+        }
+    }
+}
+.admin-panel-register{
+    display: grid;
+    place-items: center;
+    width: 680px;
+    height: 100%;
+    background-color: #fff;
+}
+.register-container{
+    width: 400px;
+    height: 500px;
+    h2{
+        @include f-style(30px, #000, 600);
+        font-family: $Font-Poppins;
+    }
+    p{
+        @include f-style(16px, #000, 400);
+        font-family: $Font-Poppins;
+        margin-bottom: 60px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px 0;
+        width: 100%;
+        height: 400px;
+            
+        div{
+            // background-color: red;
+            label{
+                display: flex;
+                align-items: center;justify-content: space-between;
+                @include f-style(16px, #24466d, 500);
+                font-family: $Font-Poppins;
+            }
+            input{
+                width: 100%;
+                height: 45px;
+                border: none;
+                border-radius: 4px;
+                outline: none;
+                text-indent: 10px;
+                font-size: 18px;
+                background-color: #EAEAEA;
+                margin-top: 10px;
+            }
+            .forgot-password{
+                display: block;
+                @include f-style(16px, blue, 500);
+                font-family: $Font-Poppins;
+                text-decoration: none;
+                margin: 20px 0 0 5px;
+                
+            }
+        }
+        .login-btn{
+            padding: 10px;
+            background-color: rgb(76,112,255);
+            @include f-style(20px, #fff, 500);
+            font-family: $Font-Poppins;
+            border: none;
+            border-radius: 8px;
+            margin-top: 45px;
+           
+            &:hover{
+                cursor: pointer;
+            }
+          
+        }
+       
+        .signup-text{
+            text-align: center;
+            @include f-style(16px, #000, 500);
+            font-family: $Font-Poppins;
+            text-decoration: none;
+            a{
+                color: #3d3df9;
+                text-decoration: none;
+                font-weight: 600;
+            }
+        }
+    }
+}
